@@ -61,6 +61,7 @@
                 <option value="wav">wav</option>
                 <option value="m4a">m4a</option>
                 <option value="flac">flac</option>
+                <option value="webm">webm</option>
             </select>
             </br>
             </br>
@@ -111,15 +112,15 @@
                 }
                 console.log(myArrayBuffer);
                 alert(myArrayBuffer.duration) ; 
-                var encoder = new OggVorbisEncoder(44100, 1, 1) ; 
-                encoder.encode([myArrayBuffer.getChannelData(0)]) ; 
-                var a = document.createElement('a');
-                a.download = "view-audio.ogg";
-                var blob = encoder.finish(["application/ogg"]) ; 
-                var url = window.URL.createObjectURL(blob);
-                a.href = url;
-                a.click();
-                window.URL.revokeObjectURL(url);
+                // var encoder = new OggVorbisEncoder(44100, 1, 1) ; 
+                // encoder.encode([myArrayBuffer.getChannelData(0)]) ; 
+                // var a = document.createElement('a');
+                // a.download = "view-audio.ogg";
+                // var blob = encoder.finish(["application/ogg"]) ; 
+                // var url = window.URL.createObjectURL(blob);
+                // a.href = url;
+                // a.click();
+                // window.URL.revokeObjectURL(url);
             });
         
             document.getElementById('browser').innerHTML = browser.name + " v" + browser.version + " " + OS + " " + context.sampleRate; 
